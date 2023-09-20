@@ -1,0 +1,38 @@
+diff --git a/Makefile b/Makefile
+index 95fa06d..eb0fdc4 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,4 +1,4 @@
+-COMPILER ?= GNU
++COMPILER ?= CLANG
+ ARCH ?= native
+ MODEL = omp-task
+ 
+diff --git a/inputs/plummer_BIG.in b/inputs/plummer_BIG.in
+new file mode 100644
+index 0000000..e4c7053
+--- /dev/null
++++ b/inputs/plummer_BIG.in
+@@ -0,0 +1,6 @@
++-n 10000
++-m 1000
++-e 0.66
++-t 3
++-c 256
++--plummer
+diff --git a/omptarget/flags.makefile b/omptarget/flags.makefile
+index ebd14af..661993f 100644
+--- a/omptarget/flags.makefile
++++ b/omptarget/flags.makefile
+@@ -1,9 +1,4 @@
+ CC=clang++
+ 
+-ifeq ($(TARGET), GPU)
+-CFLAGS=-Ofast -mllvm --nvptx-f32ftz -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=$(ARCH) 
+-LIBS=-fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=$(ARCH)
+-else 
+-CFLAGS=-Ofast -fopenmp -fopenmp-targets=x86_64 -march=$(ARCH) 
+-LIBS=-fopenmp -fopenmp-targets=x86_64 -march=$(ARCH) 
+-endif
++CFLAGS=-Ofast -fopenmp -fopenmp-targets=nvptx64
++LIBS=-fopenmp -fopenmp-targets=nvptx64

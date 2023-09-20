@@ -1,0 +1,13 @@
+diff --git a/openmp-offload/Makefile b/openmp-offload/Makefile
+index e6b7438..3b99442 100644
+--- a/openmp-offload/Makefile
++++ b/openmp-offload/Makefile
+@@ -42,7 +42,7 @@ endif
+ # LLVM Compiler Targeting A100 -- Change SM Level to Target Other GPUs
+ ifeq ($(COMPILER),llvm)
+   CC = clang
+-  CFLAGS += -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda -Xopenmp-target -march=sm_80
++  CFLAGS += -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda 
+ endif
+ 
+ # IBM XL Compiler
