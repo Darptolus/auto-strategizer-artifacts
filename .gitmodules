@@ -1,9 +1,6 @@
 [submodule "llvm-strategizer"]
 	path = llvm-strategizer
 	url = https://github.com/rodrigo-ceccato/llvm-strategizer
-[submodule "AutoStrategyzer"]
-	path = AutoStrategyzer
-	url = https://github.com/Darptolus/AutoStrategyzer
 [submodule "benchmarks/minifmm-setup/minifmm"]
 	path = benchmarks/minifmm-setup/minifmm
 	url = https://github.com/UoB-HPC/minifmm.git
@@ -13,3 +10,6 @@
 [submodule "benchmarks/rsbench-setup/RSBench"]
 	path = benchmarks/rsbench-setup/RSBench
 	url = https://github.com/ANL-CESAR/RSBench.git
+[submodule "AutoStrategizer"]
+	path = AutoStrategizer
+	url = https://github.com/Darptolus/AutoStrategizer
