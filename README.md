@@ -1,4 +1,4 @@
-# auto-strategizer-artifacts
+# AutoStrategizer Artifacts
 
 ## Artifact Identification
 The AutoStrategizer is an automated framework that utilizes complex hardware links while preserving the simplified abstraction level for the user. Through the decomposition of user-issued memory operations into architecture-aware subtasks, we automatically exploit generally underused connections of the system.
