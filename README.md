@@ -8,7 +8,7 @@ This artifact contains three sections:
 2. AutoStrategizer Library
 3. LLVM-OpenMP Integration
 
-Each include intreuctions on how to compile and run the experiments, as well as instructions on how to generate the plots.
+Each section includes instructions on how to compile and run the experiments, as well as instructions on how to generate the plots.
 
 The contributions of the paper are:
 - A novel data-centric runtime extension that considers memory operations (i.e., memory tasks) and their execution
