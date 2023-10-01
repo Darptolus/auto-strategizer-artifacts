@@ -4,9 +4,9 @@
 The AutoStrategizer is an automated framework that utilizes complex hardware links while preserving the simplified abstraction level for the user. Through the decomposition of user-issued memory operations into architecture-aware subtasks, we automatically exploit generally underused connections of the system.
 
 This artifact contains three sections:
-- Initial Experiments
-- AutoStrategizer Library
-- LLVM-OpenMP Integration
+1. Initial Experiments
+2. AutoStrategizer Library
+3. LLVM-OpenMP Integration
 
 Each include intreuctions on how to compile and run the experiments, as well as instructions on how to generate the plots.
 
@@ -20,7 +20,7 @@ The contributions of the paper are:
 git clone --recursive -j8 https://github.com/Darptolus/auto-strategizer-artifacts.git --shallow-submodules
 ```
 
-## Initial Experiments
+## 1. Initial Experiments
 
 Requirements:
 - llvm/release-15.0.0
@@ -84,7 +84,7 @@ jupyter notebook D2D_plot_b.ipynb
 ```
 Note: The output file for the experiments is in the 'results' directory
 
-## AutoStrategizer Library
+## 2. AutoStrategizer Library
 
 ```sh
 cd build/tests
@@ -95,7 +95,7 @@ Run test
 ```
 
 
-## LLVM-OpenMP Integration
+## 3. LLVM-OpenMP Integration
 From the cloned root folder, run:
 
 ```sh
