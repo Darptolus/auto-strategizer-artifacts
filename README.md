@@ -103,10 +103,10 @@ cmake -S./llvm-strategizer/llvm -B./llvm-build/release-build \
         -GNinja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=./llvm-build/install \
-        -DLLVM_ENABLE_PROJECTS=clang-tools-extra\;compiler-rt\;clang \
+        -DLLVM_ENABLE_PROJECTS=clang-tools-extra\;compiler-rt\;clang\;lld \
         -DLLVM_ENABLE_RUNTIMES=libcxx\;openmp\;libcxxabi \
         -DLLVM_TARGETS_TO_BUILD=AMDGPU\;X86\;NVPTX \
-        -DCLANG_VENDOR=LLVM-Auto-Strategyzer \
+        -DCLANG_VENDOR=LLVM-Auto-Strategizer \
         -DLIBOMPTARGET_ENABLE_DEBUG=1 \
         -DLLVM_ENABLE_ASSERTIONS=On \
         -DCMAKE_EXPORT_COMPILE_COMMANDS=On \
@@ -116,7 +116,7 @@ cmake -S./llvm-strategizer/llvm -B./llvm-build/release-build \
         -DLLVM_CCACHE_BUILD=ON \
         -DBUILD_SHARED_LIBS=1 \
         -DLLVM_USE_SPLIT_DWARF=1 \
-        -DAUTO_STRATEGIZER_LOCATION=./AutoStrategyzer
+        -DAUTO_STRATEGIZER_LOCATION=./AutoStrategizer
 ```
 
 The scripts for benchmarks assume that these relative paths are respected, so do not change them.
@@ -128,6 +128,10 @@ cmake --build ./llvm-build/release-build -j 79
 ```sh
 cmake --install ./llvm-build/release-build --prefix ./llvm-build/install
 ```
+
+## Add LLVM to PATH
+
+
 
 ## Running benchmarks
 
@@ -141,12 +145,16 @@ cd benchmarks
 
 ### Simple offload
 
+Estimated execution time: 8 min
+
 ```sh
 cd simple-offload
 ./benchmark.sh
 ```
 
 ### MiniFMM
+
+Estimated execution time:  min
 
 ```sh
 cd minifmm-setup
@@ -196,7 +204,7 @@ jupyter notebook plot.ipynb
 
 ## Artifacts scripts authors
 
-Participated in the writing and testing of these benchmark scripts, applications patches and plotting notebook:
+Participated in the writing and testing of these benchmark scripts, applications patches, and plotting notebook:
 
 - Rodrigo Ceccato (@rodrigo-ceccato)
-- Diego Roa (@Darptolus)
+- Diego Andres Roa Perdomo (@Darptolus)
